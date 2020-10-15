@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<launch>
+
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find yefan_gazebo)/worlds/default.world"/>
+        <arg name="paused" value="true"/>
+        <arg name="verbose" value="true"/>
+    </include>
+
+    <!-- Robot description -->
+    <param name="robot_description"
+           command="$(find xacro)/xacro --inorder $(find yefan_description)/robots/yefan_nolimits.urdf.xacro"/>
+    <node name="spawn_robot" pkg="gazebo_ros" type="spawn_model"
+          args=" -urdf -model yefan -param robot_description -z 0" respawn="false" output="screen"/>
+
+    <!-- Torque controllers -->
+    <rosparam command="load" file="$(find yefan_gazebo)/controllers/gazebo_control.yaml"/>
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+          output="screen" ns="/yefan"
+          args="joint_state_controller
+                joint1_position_controller joint2_position_controller joint3_position_controller
+                joint4_position_controller joint5_position_controller joint6_position_controller"/>
+
+    <!-- Services -->
+    <rosparam command="load" file="$(find yefan_gazebo)/config/topics.yaml"/>
+    <node name="srv_ik" pkg="yefan_kinematics" type="srv_ik.py" output="screen"/>
+    <node name="srv_trajectory_planner" pkg="yefan_trajectory_planner" type="srv_trajectory_planner.py" output="screen"/>
+    <node name="srv_drake" pkg="yefan_drake" type="srv_drake" output="screen"/>
+
+</launch>
+

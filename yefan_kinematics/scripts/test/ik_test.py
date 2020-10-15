@@ -1,14 +1,17 @@
 import unittest
 import numpy.testing
-from yefan_api.ik import calculate
-from yefan_api.test.fk_test import IFK_CASES
+from yefan_kinematics.scripts.ik import calculate as ik_calc
+from yefan_kinematics.scripts.fk import calculate as fk_calc
+from yefan_kinematics.scripts.test.fk_test import IFK_CASES
 
 class TestIK(unittest.TestCase):
     def test_ik(self):
 
         for i in range(len(IFK_CASES)):
             c = IFK_CASES[i]
-            numpy.testing.assert_almost_equal(c[0], calculate(c[1]), decimal=4, err_msg="case failed: " + str(i))
+            res_ik = ik_calc(c[1])
+            res_fk = fk_calc(res_ik)
+            numpy.testing.assert_almost_equal(c[1], res_fk, decimal=4, err_msg="case failed: " + str(i))
             #
             # def test_positions_failed(self):
             #     with self.assertRaises(KeyError) as ctx:

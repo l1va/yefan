@@ -1,5 +1,5 @@
 from kinematics_helpers import *
-from robot import *
+from yefan_api.robot import *
 
 
 def calculate(js):

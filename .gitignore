@@ -1,3 +1,5 @@
 .idea/
 *.pyc
 .~lock*
+/yefan_gazebo/x_desired.txt
+/yefan_gazebo/x.txt

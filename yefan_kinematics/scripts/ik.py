@@ -1,7 +1,7 @@
 # from sympy_helpers import *
 from kinematics_helpers import *
 from math import atan, atan2, sqrt, acos, pi
-from robot import *
+from yefan_api.robot import *
 import fk
 import numpy as np
 
@@ -61,7 +61,7 @@ def calculate(t):
     # print(t456)
     nx = t456[0, 0]
 
-    if abs(abs(nx) - 1) > eps:
+    if abs(abs(nx) - 1) > eps:  # if q5 is NOT near to pi/2
         ny = t456[1, 0]
         nz = t456[2, 0]
         q4 = atan2(ny, nz)
@@ -69,7 +69,10 @@ def calculate(t):
         ax = t456[0, 2]
         q6 = atan2(sx, -ax)
         if abs(sx) > eps:
-            q5 = atan2(sx, nx * sin(q6))
+            if q6 > 0.0:
+                q5 = atan2(sx, nx * sin(q6))
+            else:
+                q5 = atan2(sx, nx * sin(q6)) - pi
             #print(q6, sx, nx, sin(q6), q5)
         else:
             q5 = atan2(ax, nx * cos(q6))

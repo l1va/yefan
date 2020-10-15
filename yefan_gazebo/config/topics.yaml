@@ -1,0 +1,5 @@
+topic_gravity_generalized_forces: "/yefan/srv/drake_gravity_generalized_forces"
+topic_inertia_matrix:             "/yefan/srv/drake_inertia_matrix"
+topic_inverse_kinematics:         "/yefan/srv/ik"
+topic_jacobian_spatial:           "/yefan/srv/drake_jacobian_spatial"
+topic_trajectory_planner:         "/yefan/srv/trajectory"
