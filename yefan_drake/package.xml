@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+  <name>yefan_drake</name>
+  <version>0.0.1</version>
+  <description>The yefan drake package</description>
+  <maintainer email="s.golousov@innopolis.ru">Svyatoslav Golousov</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>drake</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>roslib</build_depend>
+  <build_depend>common_rosdeps</build_depend>
+  <build_depend>yefan_msg</build_depend>
+  <run_depend>drake</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>roslib</run_depend>
+  <run_depend>common_rosdeps</run_depend>
+  <run_depend>yefan_msg</run_depend>
+</package>

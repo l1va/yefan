@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<robot name="yefan" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:include filename="$(find yefan_description)/urdf/yefan_limits.xacro"/>
+    <xacro:include filename="$(find yefan_description)/urdf/torque_sensor.xacro"/>
+
+    <yefan_macro/>
+    <yefan_torque_sensors/>
+
+    <link name="world"/>
+
+    <joint name="grounding" type="fixed">
+        <parent link="world"/>
+        <child link="link1"/>
+        <origin
+                xyz="0 0 0"
+                rpy="0 0 0"/>
+    </joint>
+    <gazebo>
+        <plugin filename="libgazebo_ros_control.so" name="ros_control">
+            <robotNamespace>/yefan</robotNamespace>
+        </plugin>
+        <plugin filename="libgazebo_ros_ft_sensor.so" name="ft_sensor">
+            <topicName>/yefan/ft_sensor</topicName>
+            <robotNamespace>/yefan</robotNamespace>
+            <jointName>joint_torque_sensor</jointName>
+        </plugin>
+    </gazebo>
+    <gazebo reference="joint_torque_sensor">
+        <provideFeedback>true</provideFeedback>
+    </gazebo>
+</robot>

@@ -1,0 +1,5 @@
+# Vector of generalized coordinates
+float64[] q
+---
+# LQR gain matrix 12x12
+float64[] K

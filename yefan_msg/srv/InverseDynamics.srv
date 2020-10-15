@@ -1,0 +1,9 @@
+# Vector of generalized coordinates
+float64[] q
+# Vector of generalized velocities
+float64[] v
+# Vector of generalized accelerations
+float64[] a
+---
+# Vector of calculated generalized forces
+float64[] tau

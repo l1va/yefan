@@ -1,0 +1,5 @@
+# Vector of generalized coordinates
+float64[] q
+---
+# Transformation matrix 4x4
+float64[] T

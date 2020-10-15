@@ -1,8 +1,7 @@
 <?xml version="1.0" ?>
 <sdf version="1.5">
   <world name="default">
-
-    <physics type="ode">
+    <physics type="ode" name="default" default="true">
       <gravity>0.000000 0.000000 -9.810000</gravity>
       <ode>
         <solver>

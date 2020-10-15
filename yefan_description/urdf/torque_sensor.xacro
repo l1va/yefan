@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="yefan_torque_sensors">
+    <link name="link_torque_sensor">
+      <inertial>
+        <mass value="1.0"/>
+        <origin xyz="0 0 0"/>
+        <inertia ixx="0.0" ixy="0.0" ixz="0.0"
+                 iyy="0.0" iyz="0.0"
+                 izz="0.0"/>
+      </inertial>
+      <collision>
+        <geometry>
+          <!--<cylinder radius="0.07" length="0.15"/>-->
+          <sphere radius="0.07"/>
+        </geometry>
+      </collision>
+      <visual>
+        <geometry>
+          <!--<cylinder radius="0.07" length="0.15"/>-->
+          <sphere radius="0.07"/>
+        </geometry>
+      </visual>
+    </link>
+    <gazebo reference="link_torque_sensor">
+      <material>Gazebo/Blue</material>
+      <minDepth value="0.005"/>
+      <maxVel value="0.0"/>
+      <mu1 value="0.8"/>
+      <mu2 value="0.8"/>
+      <kp>1.0e+9</kp>
+      <kd>5.0e+6</kd>
+      <collision>
+        <surface>
+          <contact>
+            <ode>
+              <soft_cfm>1.7e-07</soft_cfm>
+              <soft_erp>0.17</soft_erp>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+    </gazebo>
+    <joint name="joint_torque_sensor" type="fixed">
+      <origin xyz="0.0 0.0 0.0" rpy="0 1.57079632679 0"/>
+      <parent link="link7"/>
+      <child link="link_torque_sensor"/>
+    </joint>
+
+    <gazebo reference="joint_torque_sensor">
+      <disableFixedJointLumping>true</disableFixedJointLumping>
+      <sensor name="force_torque_sensor" type="force_torque">
+        <always_on>true</always_on>
+        <update_rate>0.0</update_rate>
+        <visualize>true</visualize>
+        <force_torque>
+          <frame>sensor</frame>
+          <measure_direction>child_to_parent</measure_direction>
+        </force_torque>
+      </sensor>
+    </gazebo>
+  </xacro:macro>
+</robot>

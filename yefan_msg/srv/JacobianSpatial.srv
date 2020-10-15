@@ -1,0 +1,5 @@
+# Vector of generalized coordinates
+float64[] q
+---
+# Jacobian of Spatial Velocity 6x6
+float64[] J

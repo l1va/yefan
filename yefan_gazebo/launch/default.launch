@@ -19,5 +19,19 @@
           output="screen" ns="/yefan"
           args="joint_state_controller joint1_position_controller joint2_position_controller joint3_position_controller joint4_position_controller joint5_position_controller joint6_position_controller"/>
 
+    <node name="logger" pkg="yefan_graphics" type="logger.py" output="screen">
+        <param name="topic1" value="/yefan/joint_states js13.csv name,position" />
+        <param name="topic3" value="/test js23.csv " />
+    </node>
+<!--<rosparam>TODO: try rosparam for logger-->
+<!--    topics:-->
+<!--      - name: a-->
+<!--        timeout: 1-->
+<!--        negative: False-->
+<!--      - name: b-->
+<!--        timeout: 1-->
+<!--        negative: False-->
+<!--   </rosparam>-->
+
 </launch>
 

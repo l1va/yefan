@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<package>
+  <name>yefan_graphics</name>
+  <version>0.0.1</version>
+  <description>The yefan graphics package</description>
+  <maintainer email="s.golousov@innopolis.ru">Svyatoslav Golousov</maintainer>
+  <license>MIT</license>
+</package>

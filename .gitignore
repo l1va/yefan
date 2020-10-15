@@ -1,3 +1,17 @@
 .idea/
 *.pyc
 .~lock*
+
+/yefan_gazebo/x.txt
+/yefan_gazebo/x_desired.txt
+/yefan_gazebo/garbage/QP_with_integers.txt
+/yefan_gazebo/src/QP_test.cpp
+/yefan_graphics/matlab/experiment_3/logs_analyzer.m~
+/yefan_controllers/LQR_log.txt
+/yefan_controllers/LQR_log_desired.txt
+/yefan_controllers/PD_log.txt
+/yefan_controllers/PD_log_desired.txt
+/yefan_controllers/QP_log.txt
+/yefan_controllers/QP_log_desired.txt
+/yefan_controllers/x.txt
+/yefan_controllers/x_desired.txt

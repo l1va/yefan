@@ -1,0 +1,7 @@
+# Vector of generalized coordinates
+float64[] q
+---
+# State matrix NxN
+float64[] A
+# Input matrix NxU
+float64[] B

@@ -1,0 +1,7 @@
+# Time in seconds
+float64 t
+---
+# 4x4 Transformation matrix indicating end effector position and orientation
+float64[] T
+# 6x1 Spatial velocity vector
+float64[] W

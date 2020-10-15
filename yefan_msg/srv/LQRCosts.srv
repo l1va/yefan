@@ -1,0 +1,5 @@
+# State costs matrix 12x12
+float64[] Q
+# Input costs matrix 6x6
+float64[] R
+---
