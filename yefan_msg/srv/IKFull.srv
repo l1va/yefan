@@ -1,0 +1,9 @@
+# Transformation matrix 4x4
+float64[] T
+# Spatial velocity vector 6x1
+float64[] W
+---
+# Vector of generalized coordinates
+float64[] q
+# Vector of generalized velocities
+float64[] qdot

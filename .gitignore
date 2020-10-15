@@ -1,3 +1,8 @@
 .idea/
 *.pyc
 .~lock*
+
+/yefan_gazebo/x.txt
+/yefan_gazebo/x_desired.txt
+/yefan_gazebo/garbage/QP_with_integers.txt
+/yefan_gazebo/src/QP_test.cpp

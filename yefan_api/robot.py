@@ -38,7 +38,7 @@ class JointStatesWrapper:
 
 
 def get_joint_states():
-    return JointStatesWrapper(rospy.wait_for_message(JOINT_STATES, JointState, timeout=4))
+    return JointStatesWrapper(rospy.wait_for_message(JOINT_STATES, JointState, timeout=14))
 
 
 def joint_topic(joint, command, suffix=""):

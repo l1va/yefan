@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<package>
+  <name>yefan_trajectory_planner</name>
+  <version>0.0.1</version>
+  <description>The yefan trajectory planner package</description>
+  <maintainer email="s.golousov@innopolis.ru">Svyatoslav Golousov</maintainer>
+  <license>MIT</license>
+</package>
