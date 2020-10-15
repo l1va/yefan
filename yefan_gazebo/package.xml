@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<package>
+  <name>yefan_gazebo</name>
+  <version>0.0.1</version>
+  <description>The yefan gazebo package</description>
+  <maintainer email="mike.ivanou@gmail.com">Mike Ivanou</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>catkin</buildtool_depend>
+</package>

@@ -1,0 +1,346 @@
+<?xml version="1.0"?>
+<robot>
+    <joint name="joint_balancercase" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="link2"/>
+        <child link="link_balancercase"/>
+    </joint>
+    <link name="link_balancercase">
+        <inertial>
+            <mass value="150"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0"
+                     iyy="0.0" iyz="0.0"
+                     izz="0.0"/>
+        </inertial>
+        <collision>
+            <origin xyz="0 0 -0.346" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://yefan_description/meshes/BalancerCase.STL"/>
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="0 0 -0.346" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://yefan_description/meshes/BalancerCase.STL"/>
+            </geometry>
+
+        </visual>
+    </link>
+    <gazebo reference="link_balancercase">
+        <material>Gazebo/Yellow</material>
+    </gazebo>
+
+    <joint name="joint_balancerrod" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="link2"/>
+        <child link="link_balancerrod"/>
+    </joint>
+    <link name="link_balancerrod">
+        <inertial>
+            <mass value="15"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0"
+                     iyy="0.0" iyz="0.0"
+                     izz="0.0"/>
+        </inertial>
+        <collision>
+            <origin xyz="0 0 -0.346" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://yefan_description/meshes/BalancerRod.STL"/>
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="0 0 -0.346" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://yefan_description/meshes/BalancerRod.STL"/>
+            </geometry>
+
+        </visual>
+    </link>
+    <gazebo reference="link_balancerrod">
+        <material>Gazebo/Yellow</material>
+    </gazebo>
+
+    <joint name="joint_stopper1a" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="link1"/>
+        <child link="link_stopper1a"/>
+    </joint>
+    <link name="link_stopper1a">
+        <inertial>
+            <mass value="2"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0"
+                     iyy="0.0" iyz="0.0"
+                     izz="0.0"/>
+        </inertial>
+        <collision>
+            <origin
+                    xyz="0 0 0"
+                    rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://yefan_description/meshes/stopper_J1_A.STL"/>
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://yefan_description/meshes/stopper_J1_A.STL"/>
+            </geometry>
+
+        </visual>
+    </link>
+    <gazebo reference="link_stopper1a">
+        <material>Gazebo/Red</material>
+    </gazebo>
+
+    <joint name="joint_stopper1b" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="link1"/>
+        <child link="link_stopper1b"/>
+    </joint>
+    <link name="link_stopper1b">
+        <inertial>
+            <mass value="2"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0"
+                     iyy="0.0" iyz="0.0"
+                     izz="0.0"/>
+        </inertial>
+        <collision>
+            <origin
+                    xyz="0 0 0"
+                    rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://yefan_description/meshes/stopper_J1_B.STL"/>
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://yefan_description/meshes/stopper_J1_B.STL"/>
+            </geometry>
+
+        </visual>
+    </link>
+    <gazebo reference="link_stopper1b">
+        <material>Gazebo/Red</material>
+    </gazebo>
+
+    <joint name="joint_h501_j1" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="link1"/>
+        <child link="link_h501_j1"/>
+    </joint>
+    <link name="link_h501_j1">
+        <inertial>
+            <mass value="5"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0"
+                     iyy="0.0" iyz="0.0"
+                     izz="0.0"/>
+        </inertial>
+        <collision>
+            <origin
+                    xyz="0 0 0"
+                    rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://yefan_description/meshes/H501_J1.STL"/>
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://yefan_description/meshes/H501_J1.STL"/>
+            </geometry>
+
+        </visual>
+    </link>
+    <gazebo reference="link_h501_j1">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
+    <joint name="joint_h501_j3" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="link4"/>
+        <child link="link_h501_j3"/>
+    </joint>
+    <link name="link_h501_j3">
+        <inertial>
+            <mass value="5"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0"
+                     iyy="0.0" iyz="0.0"
+                     izz="0.0"/>
+        </inertial>
+        <collision>
+            <origin xyz="-0.312 0 -1.745" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://yefan_description/meshes/H501_J3.STL"/>
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="-0.312 0 -1.745" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://yefan_description/meshes/H501_J3.STL"/>
+            </geometry>
+        </visual>
+    </link>
+    <gazebo reference="link_h501_j3">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
+    <joint name="joint_mcover1" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="link2"/>
+        <child link="link_mcover1"/>
+    </joint>
+    <link name="link_mcover1">
+        <inertial>
+            <mass value="10"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0"
+                     iyy="0.0" iyz="0.0"
+                     izz="0.0"/>
+        </inertial>
+        <collision>
+            <origin xyz="0 0 -0.346" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://yefan_description/meshes/MotorCover_J1.STL"/>
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="0 0 -0.346" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://yefan_description/meshes/MotorCover_J1.STL"/>
+            </geometry>
+
+        </visual>
+    </link>
+    <gazebo reference="link_mcover1">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <joint name="joint_mcover2" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="link2"/>
+        <child link="link_mcover2"/>
+    </joint>
+    <link name="link_mcover2">
+        <inertial>
+            <mass value="10"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0"
+                     iyy="0.0" iyz="0.0"
+                     izz="0.0"/>
+        </inertial>
+        <collision>
+            <origin xyz="0 0 -0.346" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://yefan_description/meshes/MotorCover_J2.STL"/>
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="0 0 -0.346" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://yefan_description/meshes/MotorCover_J2.STL"/>
+            </geometry>
+        </visual>
+    </link>
+    <gazebo reference="link_mcover2">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <joint name="joint_mcover3" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="link4"/>
+        <child link="link_mcover3"/>
+    </joint>
+    <link name="link_mcover3">
+        <inertial>
+            <mass value="5"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0"
+                     iyy="0.0" iyz="0.0"
+                     izz="0.0"/>
+        </inertial>
+        <collision>
+            <origin xyz="-0.312 0 -1.745" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://yefan_description/meshes/MotorCover_J3456_bottom.STL"/>
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="-0.312 0 -1.745" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://yefan_description/meshes/MotorCover_J3456_bottom.STL"/>
+            </geometry>
+
+        </visual>
+    </link>
+    <gazebo reference="link_mcover3">
+        <material>Gazebo/Red</material>
+    </gazebo>
+
+    <joint name="joint_mcover3_top" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="link4"/>
+        <child link="link_mcover3_top"/>
+    </joint>
+    <link name="link_mcover3_top">
+        <inertial>
+            <mass value="5"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0"
+                     iyy="0.0" iyz="0.0"
+                     izz="0.0"/>
+        </inertial>
+        <collision>
+            <origin xyz="-0.312 0 -1.745" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://yefan_description/meshes/MotorCover_J3456_top.STL"/>
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="-0.312 0 -1.745" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://yefan_description/meshes/MotorCover_J3456_top.STL"/>
+            </geometry>
+        </visual>
+    </link>
+    <gazebo reference="link_mcover3_top">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <joint name="joint_insflange" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="link7"/>
+        <child link="link_insflange"/>
+    </joint>
+    <link name="link_insflange">
+        <inertial>
+            <mass value="3"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0"
+                     iyy="0.0" iyz="0.0"
+                     izz="0.0"/>
+        </inertial>
+        <collision>
+            <origin xyz="-1.807 0 -1.97" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://yefan_description/meshes/insulated_flange.STL"/>
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="-1.807 0 -1.97" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://yefan_description/meshes/insulated_flange.STL"/>
+            </geometry>
+
+        </visual>
+    </link>
+    <gazebo reference="link_insflange">
+        <material>Gazebo/White</material>
+    </gazebo>
+</robot>

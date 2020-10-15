@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<robot name="yefan" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:include filename="$(find yefan_description)/urdf/yefan.xacro"/>
+
+    <yefan_macro/>
+
+    <link name="world"/>
+
+    <joint name="grounding" type="fixed">
+        <parent link="world"/>
+        <child link="link1"/>
+        <origin
+                xyz="0 0 0"
+                rpy="0 0 0"/>
+    </joint>
+    <gazebo>
+        <plugin filename="libgazebo_ros_control.so" name="ros_control">
+            <robotNamespace>/yefan</robotNamespace>
+        </plugin>
+    </gazebo>
+</robot>

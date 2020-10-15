@@ -1,0 +1,19 @@
+<div>
+    <label for="{joint_name}_range">{joint_name}:</label>
+
+    <input type="range" id="{joint_name}_range" step="0.01" min="{min_value}" value="{curr}" max="{max_value}"
+           oninput="output_update_{joint_name}(value)"/>
+    <output for="{joint_name}_range" id="{joint_name}_value">{curr}</output>
+</div>
+<script>
+function output_update_{joint_name}(vol) {{
+	document.querySelector('#{joint_name}_value').value = vol;
+    $.post( '{server_url}', '{joint_name}='+vol,
+        function(data) {{
+            document.querySelector('#curr_pos').innerHTML = data;
+        }}
+    )
+}}
+
+
+</script>
